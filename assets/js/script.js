@@ -16,7 +16,7 @@ $.each(sampleHours, function(index){
   apptTime = dayjs().set('hour', index + 12); //change to 9 after dev
   hour = $('<div class="hour col col-2 col-lg-1">' + apptTime.format('ha') + '</div>');
   entryField = $('<textarea class="col description" id=entryField-' + index + '></textarea>');
-  saveBtn = $('<button type="submit" class="saveBtn col col-2 col-lg-1"></button>')
+  saveBtn = $('<button type="submit" class="saveBtn col col-2 col-lg-1 align-items-center"></button>')
   icon = $('<i></i>');
   $(icon).addClass('fa-solid fa-floppy-disk')
   saveBtn.append(icon);
