@@ -11,20 +11,40 @@ container = $('.container')
 // sampleHours = ['9am','10am','11am','12pm','1pm','2pm','3pm','4pm', '5pm'];
 sampleHours=[]
 sampleHours.length = 9
-$.each(sampleHours, function(index,value){
+$.each(sampleHours, function(index){
   row = $('<div class="row"></div>');
-  hour = $('<div class="hour col col-2 col-md-1">' + dayjs().set('hour', index + 9).format('h') + '</div>');
-  entryField =$('<input type="text" placeholder="Text here" class="col ">');
-  saveBtn = $('<div class="saveBtn col col-2 col-md-1"></div>')
+  apptTime = dayjs().set('hour', index + 9);
+  hour = $('<div class="hour col col-2 col-lg-1">' + apptTime.format('ha') + '</div>');
+  
+  entryField = $('<textarea class="col description"></textarea>');
+  saveBtn = $('<div class="saveBtn col col-2 col-lg-1"></div>')
   icon = $('<i></i>');
-  $(icon).addClass('fa-solid fa-floppy-disk fa-beat')
+  $(icon).addClass('fa-solid fa-floppy-disk')
   // row.attr('id', [i]);
   saveBtn.append(icon);
   row.append(hour);
   row.append(entryField);
   row.append(saveBtn);
   container.append(row);
+  $.each(row, function(apptTime) {
+    if (dayjs().isBefore(apptTime) ){
+      row.addClass('future')
+    } else if (dayjs().isSame(apptTime) ){
+      row.addClass('present')
+    } else {
+      row.addClass('past')
+    }
+  })
+  $.each(row, function(){
+   $(saveBtn).on('click', function(event){
+      event.preventDefault();
+      description = $('.description').val();
+      // console.log('hello')
+      console.log(description);
+    })
+  })
 })
 
-var _9am = dayjs().isBefore('2022-10-16', 'hour');
+
+console.log($('.row'));
 
