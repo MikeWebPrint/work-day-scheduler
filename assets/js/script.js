@@ -12,7 +12,7 @@ sampleHours.length = 13
 $.each(sampleHours, function(index){
   row = $('<form class="row" id='+(index )+'></form>'); // set ID on each row
   apptTime = dayjs().set('hour', index + 7); //start at selected hour
-  hour = $('<div class="hour col col-2 col-lg-1">' + apptTime.format('ha') + '</div>'); //display that hour
+  hour = $('<div class="hour col col-3 col-md-2 col-lg-1">' + apptTime.format('ha') + '</div>'); //display that hour
   entryField = $('<textarea class="col description" id=entryField-' + index + '></textarea>'); //create textarea and set an ID
   saveBtn = $('<button type="submit" class="saveBtn col col-2 col-lg-1 align-items-center"></button>')// create button and append icon
   icon = $('<i></i>');
