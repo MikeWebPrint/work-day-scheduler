@@ -12,7 +12,10 @@ This app works in the browser and is responsive to devices screen sizes. It util
 
 Adding an entry is as simple as clicking (or tapping) into the appointment text fields and clicking the save icon. An item may be removed by selecting and deleting the text and again, clicking the save icon.
 
-![alt text](assets/screenshot1-past-styling.jpg)
+The app is deployed here:
+[https://mikewebprint.github.io/work-day-scheduler/](https://mikewebprint.github.io/work-day-scheduler/)
+
+![screenshot](./assets/screenshot-work-day-scheduler.jpg)
 
 
 ## Credits
