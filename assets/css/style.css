@@ -31,7 +31,7 @@ textarea{
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
+  /* background-color: transparent; */
   color: var(--body-color);
   border-radius: 0;
   border-bottom: 10px solid var(--body-color);
